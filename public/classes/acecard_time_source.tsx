@@ -270,7 +270,7 @@ export class AcecardTimeLayerSource implements IMvtVectorSource {
     return true;
   }
   _onRangeChange(e:[number,number]){
-    if(!this.map){return}
+    if(!this.map || !this.map.style.loaded()){return}
     this._timeRange = e
     for(let layer of this._layers){
       this.map.setFilter(layer,["all",
