@@ -80,7 +80,7 @@ export class AcecardTimeLayerSource implements IMvtVectorSource {
     this._onRangeChange = this._onRangeChange.bind(this)
   }
   getFieldByName(fieldName: string): IField | null {
-    throw new Error('Method not implemented.');
+    return null
   }
   getLeftJoinFields(): Promise<IField[]> {
     throw new Error('Method not implemented.');
